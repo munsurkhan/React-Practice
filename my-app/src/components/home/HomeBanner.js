@@ -1,10 +1,23 @@
-import React from 'react';
+import React, {useRef, useState} from 'react';
 
 const HomeBanner = (props) => {
+    //useState
+    //useRef
+    let UserName = useRef()
+    let Password = useRef()
+
+    const submitForm=()=>{
+        let a = UserName.current.value;
+        let b = Password.current.value;
+        alert(a)
+        alert(b)
+    }
+
     return (
         <div>
-            <h1>{props.title.name}</h1>
-            <h1>{props.title.Age}</h1>
+            <input ref={UserName} placeholder={"User Name"} type="text"/>
+            <input ref={Password} placeholder={"User Password"} type="text"/>
+            <button onClick={submitForm}>Submit</button>
         </div>
     );
 };
