@@ -2,22 +2,32 @@ import React, {useEffect, useRef, useState} from 'react';
 import axios from "axios";
 
 const HomeBanner = () => {
-    //useEffect
-    let [todo,SetTodo] = useState([])
 
-    useEffect(()=>{
-        axios.get("https://jsonplaceholder.typicode.com/todos")
-            .then((res)=>{
-                SetTodo(res.data)
-            })
-            .catch((err)=>{})
-    })
+    const [color,setColor] = useState("green")
 
-    return (
-        <div>
-            {JSON.stringify(todo)}
-        </div>
-    );
+    if (color==="blue"){
+        return (
+            <div>
+                <h1 style={{color:'blue'}}>This is blue Color</h1>
+            </div>
+        );
+    }
+    else if (color==="red"){
+        return (
+            <div>
+                <h1 style={{color:'red'}}>This is Red Color</h1>
+            </div>
+        );
+    }
+    else if(color==="green"){
+        return (
+            <div>
+                <h1 style={{color:'green'}}>This is Green Color</h1>
+            </div>
+        );
+    }
+
+
 };
 
 export default HomeBanner;
