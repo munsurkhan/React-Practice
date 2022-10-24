@@ -26,6 +26,13 @@ const HomeBanner = () => {
             </div>
         );
     }
+    else if(color==="gray"){
+        return (
+            <div>
+                <h1 style={{color:'gray'}}>This is Gray Color</h1>
+            </div>
+        );
+    }
 
 
 };
