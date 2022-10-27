@@ -32,9 +32,6 @@ const HomeBanner = () => {
     }
 
 
-
-
-
     const MyList = todo.map((list,i)=>{
         return (
             <tr>
